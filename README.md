@@ -1,11 +1,9 @@
-<img src="https://joseli.to/logo-white.svg" width="224">
+# GuiigO's
 
-![npm-publish](https://github.com/breakzplatform/card/workflows/npm-publish/badge.svg)
+![npm-publish](https://github.com/guiigos/card/workflows/npm-publish/badge.svg)
 
-My own npm business card.
+## Usage
 
-# Usage
-Via npx:
 ```
-npx joselito
+$ npx guiigos
 ```

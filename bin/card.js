@@ -1,79 +1,79 @@
 #!/usr/bin/env node
 
-const chalk = require("chalk");
-const boxen = require("boxen");
-const argv = require("yargs").argv;
+const chalk = require('chalk');
+const boxen = require('boxen');
+const figlet = require('figlet');
+const argv = require('yargs').argv;
 
-const lang = argv.lang || "en";
+const paddingDefault = (str) => str.padStart(10, ' ');
 
-const options = {
+const lang = argv.lang || 'en';
+
+const color = '#2F7305';
+
+const optionsBoxen = {
   padding: 1,
-  margin: 2,
-  borderStyle: "double",
-  borderColor: "#F20089",
+  margin: 1,
+  dimBorder: false,
+  float: 'left',
+  textAlignment: 'left',
+  borderStyle: 'double',
+  borderColor: '#4CCC18',
+};
+
+const optionsFiglet = {
+  font: 'Standard',
+  horizontalLayout: 'default',
+  verticalLayout: 'default',
+  whitespaceBreak: false,
+  width: undefined,
 };
 
 const data = {
-  logo: chalk.white(`     __ _____ 
-  __|  |     |
- |  |  |  |  |
- |_____|_____|
-  _____ _____ 
- |   __|   __|
- |__   |   __|
- |_____|_____|`),
-  name: chalk.white(" Joselito ·"),
-  mail: chalk.hex("#F20089")("joseli.to@joseli.to"),
-  pronoun: {
-    en: chalk.white("(he/him/his)"),
-    pt: chalk.white("(ele/dele)"),
-  },
+  logo: chalk.white(figlet.textSync("GuiigO's", optionsFiglet)),
+  name: chalk.white('Guilherme Alves'),
+  mail: chalk.hex(color)('guiigos.alves@gmail.com'),
   work: {
-    en: chalk.white("Tech Lead · Sallve"),
-    pt: chalk.white("Líder Técnico · Sallve"),
+    en: chalk.white('Desenvolvedor · AmbevTech'),
+    pt: chalk.white('Developer · AmbevTech'),
   },
-  twitter: chalk.hex("#F20089")("https://twitter.com/breakzplatform"),
-  github: chalk.hex("#F20089")("https://github.com/breakzplatform"),
-  unsplash: chalk.hex("#F20089")("https://unsplash.com/@breakzplatform"),
-  picpay: {
-    pt: chalk.hex("#F20089")("https://picpay.me/joselitojunior"),
-    en: chalk.hex("#F20089")("https://ko-fi.com/joselito")
-  },
-  web: chalk.hex("#F20089")("https://joseli.to"),
+  web: chalk.hex(color)('http://guiigos.com'),
+  linkedin: chalk.hex(color)('https://www.linkedin.com/in/guiigos'),
+  facebook: chalk.hex(color)('https://www.facebook.com/guiigos.alves'),
+  instagram: chalk.hex(color)('https://www.instagram.com/guiigos.alves'),
+  github: chalk.hex(color)('https://github.com/guiigos'),
 };
 
 const defaultLabel = {
-  work: chalk.white.bold("      Work:"),
-  twitter: chalk.white.bold("   Twitter:"),
-  github: chalk.white.bold("    GitHub:"),
-  picpay: chalk.white.bold("     Ko-fi:"),
-  unsplash: chalk.white.bold("  Unsplash:"),
-  web: chalk.white.bold("       Web:"),
+  work: chalk.white.bold(paddingDefault('Work:')),
+  web: chalk.white.bold(paddingDefault('Web:')),
+  linkedin: chalk.white.bold(paddingDefault('Linkedin:')),
+  facebook: chalk.white.bold(paddingDefault('Facebook:')),
+  instagram: chalk.white.bold(paddingDefault('Instagram:')),
+  github: chalk.white.bold(paddingDefault('GitHub:')),
 };
 
 const label = {
   en: { ...defaultLabel },
   pt: {
     ...defaultLabel,
-    work: chalk.white.bold("  Trabalho:"),
-    card: chalk.white.bold("    Cartão:"),
-    picpay: chalk.white.bold("    PicPay:"),
+    work: chalk.white.bold('  Trabalho:'),
   },
 };
 
 const output = `${data.logo}
-
-${data.name} ${data.mail} ${data.pronoun[lang]}
-
-
+  
+${data.name} 
+${data.mail}
+  
+  
 ${label[lang].work}  ${data.work[lang]}
-
+  
 ${label[lang].web}  ${data.web}
-
-${label[lang].twitter}  ${data.twitter}
-${label[lang].github}  ${data.github}
-${label[lang].unsplash}  ${data.unsplash}
-${label[lang].picpay}  ${data.picpay[lang]}`;
+${label[lang].linkedin}  ${data.linkedin}
+${label[lang].facebook}  ${data.facebook}
+${label[lang].instagram}  ${data.instagram}
+${label[lang].github}  ${data.github}`;
 
 console.clear();
-console.log(chalk.magenta(boxen(output, options)));
+console.log(chalk.magenta(boxen(output, optionsBoxen)));

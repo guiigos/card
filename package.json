@@ -1,32 +1,29 @@
 {
-  "name": "joselito",
-  "version": "1.3.4",
-  "description": "A personal card for Joselito (@breakzplatform)",
-  "main": "index.js",
-  "bin": {
-    "joselito": "./bin/card.js"
+  "name": "guiigos",
+  "version": "1.4.0",
+  "description": "A personal card for Guilherme Alves",
+  "keywords": [
+    "card",
+    "guiigos"
+  ],
+  "homepage": "http://guiigos.com",
+  "bugs": {
+    "url": "https://github.com/guiigos/card/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/breakzplatform/card.git"
+    "url": "git+https://github.com/guiigos/card.git"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "license": "MIT",
+  "author": "Guilherme Alves <guiigos.alves@gmail.com> (http://guiigos.com)",
+  "bin": {
+    "guiigos": "./bin/card.js"
+  },
   "dependencies": {
-    "boxen": "^2.1.0",
-    "chalk": "^2.4.1",
-    "commander": "^2.19.0",
-    "yargs": "^15.3.1"
-  },
-  "devDependencies": {
-    "standard": "^12.0.1"
-  },
-  "bugs": {
-    "url": "https://github.com/breakzplatform/card/issues"
-  },
-  "homepage": "https://joseli.to",
-  "author": "Joselito <joseli.to@joseli.to> (http://joseli.to)"
+    "boxen": "5.1.1",
+    "chalk": "4.1.2",
+    "commander": "8.2.0",
+    "figlet": "^1.5.2",
+    "yargs": "17.1.1"
+  }
 }
