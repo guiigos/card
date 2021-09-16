@@ -34,8 +34,8 @@ const data = {
   name: chalk.white('Guilherme Alves'),
   mail: chalk.hex(color)('guiigos.alves@gmail.com'),
   work: {
-    en: chalk.white('Desenvolvedor · AmbevTech'),
-    pt: chalk.white('Developer · AmbevTech'),
+    en: chalk.white('Developer · AmbevTech'),
+    pt: chalk.white('Desenvolvedor · AmbevTech'),
   },
   web: chalk.hex(color)('http://guiigos.com'),
   linkedin: chalk.hex(color)('https://www.linkedin.com/in/guiigos'),
