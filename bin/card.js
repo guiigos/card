@@ -37,7 +37,7 @@ const data = {
     en: chalk.white('Developer · AmbevTech'),
     pt: chalk.white('Desenvolvedor · AmbevTech'),
   },
-  web: chalk.hex(color)('http://guiigos.com'),
+  web: chalk.hex(color)('http://guiigos.dev'),
   linkedin: chalk.hex(color)('https://www.linkedin.com/in/guiigos'),
   facebook: chalk.hex(color)('https://www.facebook.com/guiigos.alves'),
   instagram: chalk.hex(color)('https://www.instagram.com/guiigos.alves'),
